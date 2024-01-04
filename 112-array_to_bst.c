@@ -20,7 +20,7 @@ bst_t *array_to_bst(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 	{
-		if (bst_insert(&root, array[i] == NULL))
+		if (bst_insert(&root, array[i]) == NULL)
 		{
 			return (NULL);
 		}
