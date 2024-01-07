@@ -13,23 +13,18 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new_node;
 
-	// Check if parent exists
 	if (parent == NULL)
 		return (NULL);
 
-	// Allocate memory for new node
 	new_node = malloc(sizeof(binary_tree_t));
 	if (new_node == NULL)
 		return (NULL);
 
-	// Initialize new node
 	new_node->n = value;
 	new_node->parent = parent;
 	new_node->right = NULL;
 	new_node->left = NULL;
 
-	// Replace right child of parent with new node
-	// if it exists
 	if (parent->right != NULL)
 	{
 		new_node->right = parent->right;
